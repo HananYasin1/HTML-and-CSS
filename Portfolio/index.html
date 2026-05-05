@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanan Yasin | Creative Portfolio</title>
+    <style>
+        /* General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f0c29;
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Fixed Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ff007f; /* Vivid Pink */
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #00d4ff; /* Neon Blue hover */
+            color: #000;
+            border-radius: 5px;
+        }
+
+        /* Hero Video with Text Overlay */
+        .hero-video-container {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            filter: brightness(40%);
+        }
+        .video-overlay-text {
+            text-align: center;
+            z-index: 1;
+        }
+        .video-overlay-text h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px #ff007f;
+        }
+
+        /* Centered Image with Filter and Rounded Edges */
+        .image-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .profile-img {
+            width: 300px;
+            border-radius: 50px; /* Rounded edges */
+            filter: sepia(60%) hue-rotate(290deg); /* CSS Filter */
+            display: block;
+            margin: 0 auto; /* Centered */
+            border: 5px solid #00d4ff;
+        }
+
+        /* Two Column Layout */
+        .column-container {
+            display: flex;
+            width: 90%;
+            margin: 20px auto;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            height: 300px; /* Specified height */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: #00d4ff; /* Specified font color */
+        }
+
+        /* Image Overlay Fade */
+        .fade-container {
+            position: relative;
+            width: 400px;
+            margin: 40px auto;
+        }
+        .fade-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .fade-overlay {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            height: 100%; width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #ff007f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        .fade-container:hover .fade-overlay {
+            opacity: 0.9;
+        }
+        .fade-text {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Paragraph Hover Effect */
+        .hover-p {
+            text-align: center;
+            font-size: 1.2rem;
+            padding: 20px;
+            transition: 0.3s;
+        }
+        .hover-p:hover {
+            color: #ff007f;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        /* Table Styling */
+        .skill-table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            border: 2px solid #00d4ff; /* Border */
+        }
+        .skill-table th, .skill-table td {
+            padding: 15px; /* Padding */
+            border: 1px solid #444;
+            text-align: center;
+        }
+        .skill-table tr:first-child {
+            background-color: #ff007f; /* Top Row Background */
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 30px;
+            text-align: center; /* Centered */
+            font-weight: bold; /* Bold */
+            border-top: 2px solid #ff007f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navbar -->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <!-- Video with Text Overlay -->
+    <div class="hero-video-container" id="home">
+        <video autoplay muted loop id="bg-video">
+            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay-text">
+            <h1>Hanan Yasin</h1>
+            <p>Creative Developer & Visionary</p>
+        </div>
+    </div>
+
+    <!-- About Section & Two Column Layout -->
+    <div class="section-title" id="about" style="text-align:center; padding-top:80px;">
+        <h2>My Journey</h2>
+    </div>
+    
+    <div class="column-container">
+        <div class="column">
+            <h3>Education</h3>
+            <p>Hanan is currently mastering the art of Bootstrap and CSS architecture. This layout demonstrates flexbox control with specific heights and widths.</p>
+        </div>
+        <div class="column">
+            <h3>Vision</h3>
+            <p>Building unique digital experiences that combine colorful aesthetics with rock-solid code functionality.</p>
+        </div>
+    </div>
+
+    <!-- Centered Image Section -->
+    <div class="image-section">
+        <h3>The Creative Filter</h3>
+        <img src="https://picsum.photos/400/400" alt="Profile" class="profile-img">
+    </div>
+
+    <!-- Image Overlay Fade -->
+    <div class="fade-container">
+        <img src="https://picsum.photos/400/250" alt="Work" class="fade-image">
+        <div class="fade-overlay">
+            <div class="fade-text">Project Details View</div>
+        </div>
+    </div>
+
+    <!-- Hover Paragraph -->
+    <p class="hover-p">Hover over this text to see the interactive CSS effect!</p>
+
+    <!-- Table -->
+    <table class="skill-table">
+        <tr>
+            <th>Technology</th>
+            <th>Proficiency</th>
+        </tr>
+        <tr>
+            <td>HTML5</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>CSS3</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>Bootstrap</td>
+            <td>Learning</td>
+        </tr>
+    </table>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed by Hanan Yasin &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
